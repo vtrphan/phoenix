@@ -25,7 +25,7 @@ az aks create --name $KUBE_NAME --resource-group $KUBE_GROUP --node-count 3 --ge
 ```
 on the command line, if you have to use the given service principal (because you are not allowed to create services principals in Azure AD), add the following parameters
 ```
---client-secret HEREBESECRET --service-principal HEREBEAPPID
+--client-secret <service principal secret / password> --service-principal <service principal app id>
 
 
 ```

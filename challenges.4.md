@@ -23,8 +23,8 @@
 
 ## 2. Deploy an ingress controller
 
-- Learn about ingress controller (<https://kubernetes.io/docs/concepts/services-networking/ingress/)>
-- Deploy an ingress controller via Helm (<https://kubernetes.github.io/ingress-nginx/)>
+- Learn about ingress controller (<https://kubernetes.io/docs/concepts/services-networking/ingress/>)
+- Deploy an ingress controller via Helm (<https://kubernetes.github.io/ingress-nginx/>)
 - Configure the routes for ingress to your application. 
 
 > Need help with Helm? Check hints [here :blue_book:](hints/helm.md)!

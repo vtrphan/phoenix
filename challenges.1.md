@@ -12,7 +12,7 @@ In this chapter you will get a basic experience in working with containers. For 
     - Get a sense for container networking and ports
     - How to create new versions of images
     - Learn about tagging
-    - How to use VSTS automation to set up an automated workflow
+    - How to use Azure DevOps automation to set up an automated workflow
 - Deployment
     - How to provide a container image in a registry 
     - How to set up a container registry
@@ -56,8 +56,8 @@ docker kill <your_container_id>
 
 ## 2. Automate your build 
 > Need help? Check hints [here :blue_book:](hints/TeamServicesContainerBuild.md)!
-- Import the sample code from to your VSTS Team Project. You can do this via UI. 
-- Use VSTS to create a build definition which triggers on code changes. The build definition should 
+- Import the sample code from to your Azure DevOps Team Project. You can do this via UI. 
+- Use Azure DevOps to create a build definition which triggers on code changes. The build definition should 
     - create a new container image     
     - use the build number as tag to identify your image. The buildId can be found in variable *$(Build.BuildId)*  (The screenshots may show Buildnumber - make sure to use the BuildId)
     - push the new image to your private Azure Container Registry (if you don't have an ACR, create one first)
@@ -67,9 +67,9 @@ docker kill <your_container_id>
 - Run your newly created image in Azure Container Instances to see if everything works. You can start it manually in the portal or via command line.
 
 
-## 4. Relase to ACI via VSTS
+## 4. Relase to ACI via Azure DevOps
 > Need help? Check hints [here :blue_book:](hints/TeamServicesToACI.md)!
-- Use VSTS to create a release definition which is triggered by your build definition. This release definition should
+- Use Azure DevOps to create a release definition which is triggered by your build definition. This release definition should
     - deploy the latest image created by your build definition to ACI. Use the Azure CLI 
     task.
 - Now you have a full end to end flow for single container applications.

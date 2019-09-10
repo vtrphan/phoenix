@@ -27,7 +27,7 @@
 - Deploy an ingress controller via Helm (<https://kubernetes.github.io/ingress-nginx/>)
 - Configure the routes for ingress to your application. 
 
-> Need help with Helm? Check hints [here :blue_book:](hints/helm.md)!
+> Need help with Helm? Check hints [here :blue_book:](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/aks/kubernetes-helm.md)!
 
 
 ## 3. Deploy your new backend

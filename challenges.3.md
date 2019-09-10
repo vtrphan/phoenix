@@ -53,12 +53,13 @@ kubectl get pods
 kubectl delete pods/PODNAME
 ```
 
-## 3. Automate zero downtime deployment via Azure DevOps
-> Need help? Check hints [here :blue_book:](hints/TeamServicesToK8s.md)!
-- Now let's automate all of this. Create a Azure DevOps release definition. Make sure it
-- triggers when the build has finished
-- deploy your latest image created by the build definition with help of the deployment.yaml file. You can use the *Kubernetes task* to do this.
-- Use $(Build.BuildNumber) to apply the correct image.
+## 3. Automate deployment via Azure DevOps
+> This is about automatically releasing your app via yaml to you cluster. [here :blue_book:](hints/azuredevops_yaml_kubernetes.md)!
+- Check in your yaml file into your code repository
+- Make sure that your yaml file is available in the drop
+- Make sure to authenticate to your AKS cluster
+- Use the kubernetes apply task in your release to deploy your app continously
+- Activate the build and release trigger to deploy on every code change
 
 # Bonus Challenge - Technology Shootout
 Let's say a co-worker of you recommends writing the backend app with in "Go" for performance reasons. How could you try the Go-Backend and run it without downtime? Where could you find performance data? 

@@ -55,7 +55,7 @@ docker kill <your_container_id>
 
 
 ## 2. Automate your build 
-> Need help? Check hints [here :blue_book:](hints/TeamServicesContainerBuild.md)!
+> Need help? Check hints [here :blue_book:](hints/automate_container_build.md)!
 - Import the sample code from to your Azure DevOps Team Project. You can do this via UI. 
 - Use Azure DevOps to create a build definition which triggers on code changes. The build definition should 
     - create a new container image     
@@ -65,13 +65,4 @@ docker kill <your_container_id>
 ## 3. Release to ACI manually
 > Need help? Check hints [here :blue_book:](hints/ManualReleaseToACI.md)!
 - Run your newly created image in Azure Container Instances to see if everything works. You can start it manually in the portal or via command line.
-
-
-## 4. Relase to ACI via Azure DevOps
-> Need help? Check hints [here :blue_book:](hints/TeamServicesToACI.md)!
-- Use Azure DevOps to create a release definition which is triggered by your build definition. This release definition should
-    - deploy the latest image created by your build definition to ACI. Use the Azure CLI 
-    task.
-- Now you have a full end to end flow for single container applications.
-
 

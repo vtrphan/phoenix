@@ -1,6 +1,6 @@
-# VSTS to ACI
+# Azure DevOps to ACI
 
-1. Create a release definition in VSTS. Its pretty similar to setting up a build definition but it looks slightly different. Choose the empty template.
+1. Create a release definition in Azure DevOps. Its pretty similar to setting up a build definition but it looks slightly different. Choose the empty template.
 2.  To deploy a single container to ACI just add one task in the default environment. Use the "+" icon to add it. The task is called "Azure CLI preview". In the pipeline connect your build definition you created earlier.
 3. Provide an inline script to run the image on ACI as shown below. Replace the necessary values.
 ```

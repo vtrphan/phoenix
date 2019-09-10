@@ -60,6 +60,7 @@ kubectl delete pods/PODNAME
 - Make sure to authenticate to your AKS cluster
 - Use the kubernetes apply task in your release to deploy your app continously
 - Activate the build and release trigger to deploy on every code change
+> You can use the full_deploy.yml *hints/yaml* folder. But again, try for yourself ;)
 
 # Bonus Challenge - Technology Shootout
 Let's say a co-worker of you recommends writing the backend app with in "Go" for performance reasons. How could you try the Go-Backend and run it without downtime? Where could you find performance data? 

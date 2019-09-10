@@ -8,7 +8,7 @@
 >- How to store secrets in Kubernetes
 >- How to configure your Kubernetes instance to ensure a certain number of pods is always running
 >- How to define rolling upgrades to avoid downtime during an application update
->- How to put all what you've learned into an end to end DevOps pipeline via VSTS
+>- How to put all what you've learned into an end to end DevOps pipeline via Azure DevOps
 
 
 ## 1. Kubernetes multi container app deployment 
@@ -54,8 +54,8 @@ Let's configure it for self-healing.
     - Provide the AI key as an environment variable to your pods as a secret as described [here](hints/createsecrets.md) and redeploy the pods.
 
 
-# Fully automated VSTS YAML deployment
-In this chapter you will leverage self-healing capabilites of K8s and extend your VSTS pipeline to trigger a deployment to your K8s cluster. Your application will have no downtime during a rolling upgrade.
+# Fully automated Azure DevOps YAML deployment
+In this chapter you will leverage self-healing capabilites of K8s and extend your Azure DevOps pipeline to trigger a deployment to your K8s cluster. Your application will have no downtime during a rolling upgrade.
 
 ## 1. Create a yaml
 - Create a deployment file to decribe the desired state of your application including replicas of your backend service.
@@ -70,9 +70,9 @@ In this chapter you will leverage self-healing capabilites of K8s and extend you
 - Check the number of backend pods. K8s will take care to keep the number of available pods as specified.
 - Give it a try and kill some pods. They will be recreated.
 
-## 3. Automate zero downtime deployment via VSTS
+## 3. Automate zero downtime deployment via Azure DevOps
 > Need help? Check hints [here :blue_book:](hints/TeamServicesToK8s.md)!
-- Now let's automate all of this. Create a VSTS release definition. Make sure it
+- Now let's automate all of this. Create a Azure DevOps release definition. Make sure it
 - triggers when the build has finished
 - deploy your latest image created by the build definition with help of the deployment.yaml file. You can use the *Kubernetes task* to do this.
 - Use $(Build.BuildNumber) to apply the correct image.

@@ -13,18 +13,18 @@ Do the same for the backend (folder: *apps/js-calc-backend*).
 2. Push the images to your ACR.
     - Login to your ACR
     ```
-    docker login YOURREGISTRY.azurecr.io
+    docker login <YOURREGISTRY>.azurecr.io
     ```
     Provide username and password as found in the portal.
     
     - Tag your image
     ```
-    docker tag calcfrontend YOURREGISTRY.azurecr.io/calcfrontend
+    docker tag calcfrontend <YOURREGISTRY>.azurecr.io/calcfrontend
     ```
 
     - Then push your images. Do it for both frontend and backend images.
     ```
-    docker push YOURREGISTRY.azurecr.io/calcfrontend
+    docker push <YOURREGISTRY>.azurecr.io/calcfrontend
     ```
     Your images are now available in your ACR.
 

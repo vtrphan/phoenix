@@ -14,7 +14,7 @@ variables:
   imageRepository: 'acihelloworld'
   containerRegistry: 'vphancontainerregistry.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/apps/aci-helloworld/Dockerfile'
-  tag: '$(Build.DefinitionName):$(Build.BuildId)'
+  tag: '$(Build.BuildId)'
   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'

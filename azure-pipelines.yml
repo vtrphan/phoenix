@@ -11,10 +11,10 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'ef93f72d-b199-48ac-929b-eb8a854e14f4'
-  imageRepository: 'aci-helloworld:$(Build.BuildId)'
+  imageRepository: 'aci-helloworld:'
   containerRegistry: 'vphancontainerregistry.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/apps/aci-helloworld/Dockerfile'
-  tag: 'aci-helloworld:$(Build.BuildId)'
+  tag: '$(Build.BuildId)'
   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
